@@ -30,19 +30,19 @@ public class Utilizator {
     /**
      * Last name of the user.
      */
-    @Column(name = "nume", length = 50, nullable = false)
+    @Column(name = "nume", length = 100, nullable = false)
     private String nume;
 
     /**
      * First name of the user.
      */
-    @Column(name = "prenume", length = 50, nullable = false)
+    @Column(name = "prenume", length = 100, nullable = false)
     private String prenume;
 
     /**
      * Email of the user.
      */
-    @Column(name = "email", length = 50, unique = true, nullable = false)
+    @Column(name = "email", length = 100, unique = true, nullable = false)
     private String email;
 
     /**
@@ -54,7 +54,7 @@ public class Utilizator {
     /**
      * Password of the user.
      */
-    @Column(name = "parola", length = 50, nullable = false)
+    @Column(name = "parola", length = 100, nullable = false)
     private String parola;
 
     /**

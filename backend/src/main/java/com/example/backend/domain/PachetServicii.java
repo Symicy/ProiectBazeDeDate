@@ -38,4 +38,10 @@ public class PachetServicii {
      */
     @Column(name = "nume", length = 50, nullable = false)
     private String nume;
+
+    /**
+     * Description of the service package.
+     */
+    @Column(name = "descriere", length = 500, nullable = false)
+    private String descriere;
 }

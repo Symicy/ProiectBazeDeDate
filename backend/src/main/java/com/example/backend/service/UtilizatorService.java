@@ -27,7 +27,7 @@ public class UtilizatorService {
     public Utilizator loginUtilizator(Utilizator utilizator) {
         Utilizator foundUtilizator = utilizatorRepo.findUtilizatorByEmail(utilizator.getEmail())
                 .orElseThrow(() -> new RuntimeException("Email invalid"));
-        if (utilizator.getParola().equals(foundUtilizator.getParola())) {
+        if (bCryptPasswordEncoder.matches(utilizator.getParola(), foundUtilizator.getParola())) {
             return foundUtilizator;
         } else {
             throw new RuntimeException("Parola invalida");

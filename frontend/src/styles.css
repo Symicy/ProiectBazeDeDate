@@ -1,0 +1,5 @@
+.showcar-image {
+    max-width: 100%; /* Asigură-te că imaginea nu depășește containerul */
+    height: auto; /* Păstrează proporțiile imaginii */
+    margin: auto; /* Centrare pe verticală */
+}

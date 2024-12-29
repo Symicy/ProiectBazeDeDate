@@ -24,6 +24,10 @@ public class RezervareService {
         return rezervareRepo.findAll();
     }
 
+    public List<Rezervare> getRezervariByUtilizatorId(Long id) {
+        return rezervareRepo.findRezervareByUtilizatorIdUtilizator(id).orElseThrow(() -> new RuntimeException("Rezervarile nu au fost gasite"));
+    }
+
     public Rezervare createRezervare(Rezervare rezervare) {
         return rezervareRepo.save(rezervare);
     }

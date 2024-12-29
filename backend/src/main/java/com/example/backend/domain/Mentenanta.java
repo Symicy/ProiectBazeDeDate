@@ -1,5 +1,6 @@
 package com.example.backend.domain;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -32,8 +33,9 @@ public class Mentenanta {
     /**
      * Identifier of the associated vehicle.
      */
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "idVehicul", referencedColumnName = "idVehicul")
+    @JsonBackReference
     private Vehicul vehicul;
 
     /**

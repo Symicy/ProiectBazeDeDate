@@ -1,7 +1,9 @@
 package com.example.backend.service;
 
 import com.example.backend.domain.Mentenanta;
+import com.example.backend.domain.Vehicul;
 import com.example.backend.repo.MentenantaRepo;
+import com.example.backend.repo.VehiculRepo;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -15,6 +17,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class MentenantaService {
     private final MentenantaRepo mentenantaRepo;
+    private final VehiculRepo vehiculRepo;
 
     public Mentenanta getMentenantaById(Long id) {
         return mentenantaRepo.findMentenantaByIdMentenanta(id).orElseThrow(() -> new RuntimeException("Mentenanta nu a fost gasita"));
@@ -36,5 +39,7 @@ public class MentenantaService {
         return mentenantaRepo.save(mentenanta);
     }
 
-
+    public Vehicul findVehiculById(Long id) {
+        return vehiculRepo.findById(id).orElseThrow(() -> new RuntimeException("Vehiculul nu a fost gasit"));
+    }
 }

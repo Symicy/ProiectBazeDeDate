@@ -33,7 +33,7 @@ public class Rezervare {
      * Identifier of the associated client.
      */
     @ManyToOne
-    @JoinColumn(name = "idClient", nullable = false)
+    @JoinColumn(name = "idUtilizator", nullable = false)
     private Utilizator utilizator;
 
     /**

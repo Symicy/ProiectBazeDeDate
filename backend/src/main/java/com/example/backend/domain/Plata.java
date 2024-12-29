@@ -18,7 +18,7 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @AllArgsConstructor
 @JsonInclude(JsonInclude.Include.NON_DEFAULT) // exclude null fields
-@Table(name = "plati")
+@Table(name = "plata")
 public class Plata {
 
     /**

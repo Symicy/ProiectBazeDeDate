@@ -8,11 +8,19 @@
 // import Faq from "../components/Faq";
 // import Download from "../components/Download";
 // import Footer from "../components/Footer";
+import BackgroundImage from "../images/background/background.jpg";
+import ShowCar from "../components/ShowCar.jsx";
 
 function Home() {
     return (
-        <>
-            {/*<Hero />*/}
+        <div style={{
+            backgroundImage: `url(${BackgroundImage})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            height: '100vh'
+        }}>
+            <ShowCar/>
+
             {/*<BookCar />*/}
             {/*<PlanTrip />*/}
             {/*<PickCar />*/}
@@ -22,7 +30,7 @@ function Home() {
             {/*<Faq />*/}
             {/*<Download />*/}
             {/*<Footer />*/}
-        </>
+        </div>
     );
 }
 

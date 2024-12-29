@@ -21,11 +21,9 @@ public class UtilizatorResource {
 
     @PostMapping("/inregistrare")
     public ResponseEntity<Utilizator> createUtilizator(@RequestBody Utilizator utilizator) {
-        try {
+
             return ResponseEntity.created(URI.create("/utilizatori/utilizatorID")).body(utilizatorService.createUtilizator(utilizator));
-        } catch (RuntimeException e) {
-            return ResponseEntity.status(409).body(null); // 409 Conflict
-        }
+
     }
 
     @PostMapping("/autentificare")

@@ -9,10 +9,6 @@ const VehicleList=({data, user, currentPage, getAllVehicles})=>
         }
     };
 
-    const showcar=(masina)=>{
-        console.log(masina);
-    }
-
     return(
         <main className={'main'}>
             {data?.content?.length===0 && <div>Nici o masina gasita</div>}

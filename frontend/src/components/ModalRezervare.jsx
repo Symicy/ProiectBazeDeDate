@@ -36,7 +36,7 @@ const ModalRezervare=({masina, utilizator})=>{
                 dataInceput: rezervare.dataInceput,
                 dataIncheiere: rezervare.dataIncheiere,
                 status: 'in asteptare',
-                costTotal: rezervare.costTotal,
+                //costTotal: rezervare.costTotal,
             }
             await saveRezervare(valuesRezervare, rezervare.idVehicul, rezervare.idUtilizator, rezervare.idPachet);
             setRezervare({

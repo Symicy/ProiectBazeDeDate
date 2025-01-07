@@ -26,6 +26,14 @@ const ProfilePage = ({user}) => {
         return <div>Loading...</div>;
     }
 
+    const calculateCost = (rezervare) => {
+        const dataInceput = new Date(rezervare.dataInceput);
+        const dataIncheiere = new Date(rezervare.dataIncheiere);
+        const dif = dataIncheiere.getTime() - dataInceput.getTime();
+        const zile = Math.ceil(dif / (1000 * 60 * 60 * 24));
+        return zile * rezervare.vehicul.costInchiriere + rezervare.pachet.costPachet;
+    }
+
     return (
         <div className="container">
             <h2>Rezervările tale</h2>
@@ -46,9 +54,9 @@ const ProfilePage = ({user}) => {
                                         {rezervare.vehicul.producator} {rezervare.vehicul.model}
                                     </h5>
                                     <p className="card-text">
-                                        <strong>Perioada:</strong> {rezervare.dataInceput} - {rezervare.dataIncheiere}
+                                        <strong>Perioada:</strong> {rezervare.dataInceput} -> {rezervare.dataIncheiere}
                                         <br />
-                                        <strong>Cost total:</strong> {rezervare.costTotal} RON
+                                        <strong>Cost total:</strong> {calculateCost(rezervare)} RON
                                         <br />
                                         <strong>Status:</strong> {rezervare.status}
                                     </p>

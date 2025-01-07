@@ -10,6 +10,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import ProfilePage from "./pages/ProfilePage.jsx";
 import {useEffect, useState} from "react";
+import PachetPage from "./pages/PachetPage.jsx";
 
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
                 <Route path="/login" element={<Login/>}/>
                 <Route path="/masini" element={<VehiclePage/>}/>
                 <Route path="/profile" element={<ProfilePage user={user}/>}/>
+                <Route path="/pachet_servicii" element={<PachetPage/>} />
                 {/*<Route path="about" element={<About />} />*/}
                 {/*<Route path="models" element={<Models />} />*/}
                 {/*<Route path="testimonials" element={<TestimonialsPage />} />*/}

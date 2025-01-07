@@ -57,12 +57,6 @@ public class Rezervare {
     private String status;
 
     /**
-     * Total cost of the reservation.
-     */
-    @Column(name = "costTotal", nullable = false)
-    private double costTotal;
-
-    /**
      * Start date of the reservation.
      */
     @Column(name = "dataInceput", nullable = false)

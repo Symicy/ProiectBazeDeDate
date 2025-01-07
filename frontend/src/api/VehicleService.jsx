@@ -10,7 +10,7 @@ export async function getVehicles(page=0, size=10) {
     return await axios.get(`${VEHICLE_API_BASE_URL}?page=${page}&size=${size}`);
 }
 
-export async function getVehicle(id) {
+export async function getVehicleById(id) {
     return await axios.get(`${VEHICLE_API_BASE_URL}/${id}`);
 }
 
@@ -20,4 +20,8 @@ export async function updateVehicle(vehicle) {
 
 export async function updatePhoto(formData) {
     return await axios.put(`${VEHICLE_API_BASE_URL}/photo`, formData);
+}
+
+export async function deleteVehicle(id) {
+    return await axios.delete(`${VEHICLE_API_BASE_URL}/${id}`);
 }

@@ -9,3 +9,7 @@ export async function savePachet(pachet) {
 export async function getPacheteServicii(){
     return await axios.get(PACHETE_SERVICII_API_BASE_URL);
 }
+
+export async function getPachetById(id){
+    return await axios.get(`${PACHETE_SERVICII_API_BASE_URL}/${id}`);
+}

@@ -36,6 +36,11 @@ public class VehiculResource {
         return ResponseEntity.ok().body(vehiculService.getAllVehicule(page, size));
     }
 
+    @PutMapping
+    public ResponseEntity<Vehicul> updateVehicul(@RequestBody Vehicul vehicul) {
+        return ResponseEntity.ok().body(vehiculService.updateVehicul(vehicul));
+    }
+
     @GetMapping("/{idVehicul}")
     public ResponseEntity<Vehicul> getVehiculById(@PathVariable(value = "idVehicul") Long id) {
         return ResponseEntity.ok().body(vehiculService.getVehiculById(id));

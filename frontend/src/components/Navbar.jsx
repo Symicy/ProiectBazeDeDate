@@ -43,10 +43,9 @@ function Navbar(){
                             </li>
                             <li className="nav-item">
                                 <Link to="/masini" className="nav-link active">Masini</Link>
-                                {/*<a className="nav-link active" href="#">Vehicule</a>*/}
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link active" href="#">Despre</a>
+                                <Link to="/pachet_servicii" className="nav-link active">Pachete Servicii</Link>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link active" href="#">Contact</a>

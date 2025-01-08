@@ -54,7 +54,7 @@ const ProfilePage = ({user}) => {
                                         {rezervare.vehicul.producator} {rezervare.vehicul.model}
                                     </h5>
                                     <p className="card-text">
-                                        <strong>Perioada:</strong> {rezervare.dataInceput} -> {rezervare.dataIncheiere}
+                                        <strong>Perioada:</strong> {rezervare.dataInceput} : {rezervare.dataIncheiere}
                                         <br />
                                         <strong>Cost total:</strong> {calculateCost(rezervare)} RON
                                         <br />
